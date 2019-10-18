@@ -11,41 +11,37 @@
                     <span class="breadcrumb-item active">Voyages</span>
                 </nav>
             </div>
-        </div>
-  @foreach($reservations as $res)
+    </div>
+  @foreach($reservations as $reservation )
     <div class="row  justify-content-center">
-        <div class="col-md-8">
-            <div class="card bg-gradient-info" style="border-bottom-right-radius: 5%; border-bottom-left-radius: 5%">
-
-            <form action="{{ route('voyage')}}" method="post">      
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="{{ url('reservation/détail/'.$res->id )}}" style="color: white">
-                        <b>Trajet :</b> {{ $res->trajet}}</a> 
-                        <br>
-                        <span class="text-right"><b>Date :</b>
-                        {{ \Carbon\Carbon::parse($res->date_voyage)->format('d/m/Y h:m')}} </span>  
-                    </h4>
-                    <h5><b>Description :</b></h5>       
-                    <p>{{ $res->description}}</p>                                          
-                        @csrf
-                        <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                        <input type="hidden" name="reservation_id" value="{{ $res->id }}"> 
-                        <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="mdi mdi-account-outline"></i></span>
-                        </div>
-                        <input type="number" class="form-control" name="nbr_personnes" min="1" placeholder="Nombre de places">
-                        </div>
-                </div>
-                <div class="card-footer"> 
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-gradient-danger">Réservé</button>
-                    </div> 
-                </form>
-                </div>
-            </div>
-        </div> 
+         <div class="col-md-8">
+              <div class="card" style="border-bottom-right-radius: 5%; border-bottom-left-radius: 5%">
+                  <div class="card-header">
+                     <img src="{{asset('assets/images/logo/bus.png') }}" class="card-img-top" height="250px">
+                  </div>      
+                  <div class="card-body">
+                      <h3 class="alert alert-float">
+                         Départ <b>{{ \Carbon\Carbon::parse($reservation->date_voyage)->format('h:m d/m/Y')}} </b>
+                      </h3> 
+                      <h3 class="card-title">
+                          <b><i class="fa fa-bus" aria-hidden="true"></i> {{ $reservation->trajet}}</b>                        
+                      </h3>
+                      <h5>Description</h5>       
+                      <p>{{ $reservation->description}}</p> 
+                      <hr>
+                      <div class="row">
+                          <div class="col-md-3">
+                              <h4> Bus complets </h4>
+                          </div>
+                           <div class="col-md-2 offset-7">
+                              <h4>{{ $reservation->prix}} dhs </h4>
+                              <p>Par place</p>
+                          </div>                                  
+                      </div> 
+                  </div> 
+              </div>
+        </div>
+    </div>      
 @endforeach
 
 </div>

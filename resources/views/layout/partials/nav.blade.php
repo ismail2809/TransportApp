@@ -8,54 +8,23 @@
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
-                                    <i class="mdi mdi-gauge"></i>
+                                    <i class="mdi mdi-bus-school"></i>
                                 </span>
-                                <span class="title">Dashboard</span>
+                                <span class="title">Voyages</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.html">Default</a>
+                                    <a href="{{ url('/voyages') }}">Voyages</a>
                                 </li>
                                 <li>
-                                    <a href="index-analytical.html">Analytical</a>
-                                </li>
+                                    <a href="{{ url('/reservation/new') }}">Nouveau voyage</a>
+                                </li> 
                                 <li>
-                                    <a href="index-bank.html">Bank</a>
-                                </li>
-                                <li>
-                                    <a href="index-saas.html">Saas</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-image-filter-drama"></i>
-                                </span>
-                                <span class="title">Apps</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="email.html">Email</a>
-                                </li>
-                                <li>
-                                    <a href="calendar.html">Calendar</a>
-                                </li>
-                                <li>
-                                    <a href="chat-app.html">Chat App</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="task.html">Task</a>
-                                </li>
+                                    <a href="{{ url('/voyage/listes') }}">Liste des voyages</a>
+                                </li> 
                             </ul>
                         </li> 
                          
