@@ -44,6 +44,6 @@ class VoyageController extends Controller
         $voyage->save();
         //dd($voyages);  
 
-        return back();      
+        return view('layout/partials/message_success');      
     }
 }

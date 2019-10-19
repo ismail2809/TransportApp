@@ -3,8 +3,8 @@
                 <div class="header-container">
                     <div class="nav-logo">
                         <a href="index.html">
-                            <div class="logo logo-dark" style="background-image: url('assets/images/logo/logo.png')"></div>
-                            <div class="logo logo-white" style="background-image: url('assets/images/logo/logo-white.png')"></div>
+                            <div class="logo logo-dark" style="background-image: url('{{asset('assets/images/logo/logo.png') }}')"></div>
+                            <div class="logo logo-white" style="background-image: url('{{asset('assets/images/logo/logo-white.png')}} ')"></div>
                         </a>
                     </div>
                     <ul class="nav-left">
@@ -74,7 +74,7 @@
                                             <li class="list-item">
                                                 <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                                        <img src="{{asset('assets/images/avatars/thumb-3.jpg') }}" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <span class="title p-t-10">Debra Stewart</span>
@@ -84,7 +84,7 @@
                                             <li class="list-item">
                                                 <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="assets/images/avatars/thumb-5.jpg" alt="">
+                                                        <img src="{{asset('assets/images/avatars/thumb-5.jpg') }}" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <span class="title p-t-10">Jane Hunt</span>
@@ -241,40 +241,33 @@
                         </li>
                         <li class="user-profile dropdown dropdown-animated scale-left">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="assets/images/avatars/thumb-13.jpg" alt="">
+                                <img class="profile-img img-fluid" src="{{asset('assets/images/avatars/thumb-13.jpg') }}" alt="">
                             </a>
                             <ul class="dropdown-menu dropdown-md p-v-0">
                                 <li>
                                     <ul class="list-media">
                                         <li class="list-item p-15">
                                             <div class="media-img">
-                                                <img src="assets/images/avatars/thumb-13.jpg" alt="">
+                                                <img src="{{asset('assets/images/avatars/thumb-13.jpg') }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title text-semibold">Marshall Nichols</span>
-                                                <span class="sub-title">UI/UX Desinger</span>
+                                                <span class="title text-semibold">{{Auth::user()->name}}</span>
+                                                <span class="sub-title">{{Auth::user()->email}}</span>
                                             </div>
                                         </li>
                                     </ul>
                                 </li>
-                                <li role="separator" class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-settings p-r-10"></i>
-                                        <span>Setting</span>
-                                    </a>
-                                </li>
+                                <li role="separator" class="divider"></li>                                
                                 <li>
                                     <a href="#">
                                         <i class="ti-user p-r-10"></i>
                                         <span>Profile</span>
                                     </a>
-                                </li>
+                                </li> 
                                 <li>
                                     <a href="#">
-                                        <i class="ti-email p-r-10"></i>
-                                        <span>Inbox</span>
-                                        <span class="badge badge-pill badge-success pull-right">2</span>
+                                        <i class="ti-settings p-r-10"></i>
+                                        <span>Setting</span>
                                     </a>
                                 </li>
                                 <li>

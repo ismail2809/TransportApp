@@ -38,6 +38,11 @@
                               <p>Par place</p>
                           </div>                                  
                       </div> 
+                      <div class="card-footer text-right">
+                          <a href="{{ url('reservation/détail/'.$reservation->id )}}" class="btn btn-success">
+                            Réservé ta place
+                          </a>
+                      </div>
                   </div> 
               </div>
         </div>
