@@ -63,7 +63,7 @@
                             </div>
                         </div> 
                         <div class="form-group row">
-                            <label class="col-sm-3 col-form-label control-label text-sm-righ">Description</label>
+                            <label class="col-sm-3 col-form-label control-label text-sm-right">Description</label>
                             <div class="col-sm-9">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" placeholder="Description" >{{ $user->description}}</textarea>
                             </div>

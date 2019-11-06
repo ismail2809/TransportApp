@@ -1,7 +1,19 @@
-@extends('layouts.app')
+@extends('layout.index')
 
 @section('content')
-<div class="container">
+<div class="main-content">
+    <div class="container-fluid">
+        
+        <div class="page-header"> 
+            <div class="header-sub-title">
+                <nav class="breadcrumb breadcrumb-dash">
+                    <a href="{{url('/home')}}" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
+                    <a class="breadcrumb-item" href="{{url('/')}}">Profile</a>
+                    <span class="breadcrumb-item active">Change password</span>
+                </nav>
+            </div>
+        </div> 
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -43,5 +55,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

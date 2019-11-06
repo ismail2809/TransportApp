@@ -86,7 +86,7 @@
                             </div> 
                             <div class="card-footer"> 
                               <div class="text-right">
-                                  <button type="submit" class="btn btn-gradient-danger">Réservé</button>
+                                  <button type="submit" class="btn btn-gradient-danger btn-rounded btn-float">Réservé</button>
                               </div>  
                             </div> 
                         </form>

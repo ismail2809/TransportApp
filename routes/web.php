@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/1', function () {
+    return view('layout.index');
+});
 
 Auth::routes();
 
@@ -29,4 +32,5 @@ Route::post('/voyage', 'VoyageController@store')->name('voyage');
 Route::get('/profile', 'ProfileController@index'); 
 Route::get('/profile/{id}/edit', 'ProfileController@edit'); 
 Route::put('/profile/{id}', 'ProfileController@update'); 
+Route::get('/profile/change_password', 'ProfileController@change_password'); 
 

@@ -48,6 +48,7 @@ class ProfileController extends Controller
          return back()->with('warning','les informations est modifié !');
     }
     
+    public function change_password(Request $request)
      
      
 }
