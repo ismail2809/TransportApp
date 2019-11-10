@@ -15,6 +15,13 @@ class VoyageController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }    
+
+    public function listes()
+    {
+       $voyages = Voyage::with('users','reservations')->get();
+       //dd($voyages);exit();
+        return view('voyage.listes',compact('voyages'));
     }
 
      public function index(){
@@ -28,8 +35,8 @@ class VoyageController extends Controller
         $reservation = Reservation::find($id);
         $this->authorize('view',$reservation);
         $voyages = Voyage::where('reservation_id',$id)->sum('nbr_personnes');
-
         $place_reste = ($reservation->nbr_place_disponible - $voyages);
+        
         return view('reservation.detail',compact('reservation','voyages','place_reste'));        
      }
 

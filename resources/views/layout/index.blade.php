@@ -8,14 +8,12 @@
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{asset('assets/images/logo/apple-touch-icon.html') }}">
     <link rel="shortcut icon" href="{{asset('assets/images/logo/favicon.png') }}">
-
     <!-- core dependcies css -->
-    <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap/dist/css/bootstrap.css') }}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/PACE/themes/blue/pace-theme-minimal.css') }}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css') }}" />
-
+    <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap/dist/css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{asset('assets/vendor/PACE/themes/blue/pace-theme-minimal.css') }}"/>
+    <link rel="stylesheet" href="{{asset('assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css') }}"/>
     <!-- page css -->
-
+    <link rel="stylesheet" href="{{asset('assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css') }}"/>
     <!-- core css -->
     <link href="{{asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{asset('assets/css/themify-icons.css') }}" rel="stylesheet">
@@ -28,9 +26,8 @@
     <div class="app header-success-gradient">
         <div class="layout">
 
-
-           @include('layout.partials.header')
-           @include('layout.partials.nav')
+            @include('layout.partials.header')
+            @include('layout.partials.nav')
 
             <!-- Page Container START -->
             <div class="page-container">
@@ -45,10 +42,11 @@
     </div>
 
     <script src="{{asset('assets/js/vendor.js') }}"></script>
-
     <script src="{{asset('assets/js/app.min.js') }}"></script>
-
     <!-- page js -->
+    <script src="{{asset('assets/vendor/datatables/media/js/jquery.dataTables.js') }}"></script>
+    <script src="{{asset('assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{asset('assets/js/tables/data-table.js') }}"></script>
     
 </body> 
 </html>

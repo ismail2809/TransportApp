@@ -19,4 +19,9 @@ class Voyage extends Model
         return $this->belongsTo('App\Reservation','reservation_id');
         
     } 
+    public function transports(){
+
+        return $this->belongsTo('App\Transport','transport_id');
+        
+    } 
 }

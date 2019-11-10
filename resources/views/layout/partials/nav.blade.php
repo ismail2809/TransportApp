@@ -1,3 +1,6 @@
+@guest
+
+@else
            <!-- Side Nav START -->
             <div class="side-nav expand-lg">
                 <div class="side-nav-inner">
@@ -15,12 +18,12 @@
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">                            
                                 <li>
-                                    <a href="{{ url('/voyages') }}">Voyages</a>
+                                    <a href="{{ url('/voyage/new') }}">Nouveau voyage</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/reservation/new') }}">Nouveau voyage</a>
+                                    <a href="{{ url('/voyages') }}">Voyages</a>
                                 </li> 
                                 <li>
                                     <a href="{{ url('/voyage/listes') }}">Liste des voyages</a>
@@ -51,3 +54,4 @@
                 </div>
             </div>
             <!-- Side Nav END -->
+@endguest            

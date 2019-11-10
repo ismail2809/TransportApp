@@ -12,4 +12,7 @@ class Transport extends Model
     public function voyage(){
         return $this->hasMany('App\Voyage');
     }
+    public function reservation(){
+        return $this->hasMany('App\Reservation');
+    }
 }

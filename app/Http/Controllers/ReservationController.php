@@ -29,6 +29,12 @@ class ReservationController extends Controller
         return view('reservation.new',compact('transports'));
     }
 
+    public function listes()
+    {
+        $reservations = Reservation::with('users','transports')->get();
+        return view('reservation.listes',compact('reservations'));
+    }
+
     public function store(Request $request)
     {   
         $request->validate([

@@ -14,9 +14,14 @@ class Reservation extends Model
         return $this->belongsTo('App\User','user_id');
         
     } 
-    public function reservations(){
 
-        return $this->belongsTo('App\Reservation','reservation_id');
+    public function voyage(){
+        return $this->hasMany('App\Voyage');
+    }
+
+    public function transports(){
+
+        return $this->belongsTo('App\Transport','transport_id');
         
-    } 
+    }
 }
