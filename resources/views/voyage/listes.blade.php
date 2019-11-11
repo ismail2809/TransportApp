@@ -24,7 +24,8 @@
                                         <th style="color: red;text-align:center">User</th>
                                         <th style="color: red;text-align:center">Transport</th>
                                         <th style="color: red;text-align:center">Trajet</th>
-                                        <th style="color: red;text-align:center">Nombre de voyageurs</th>
+                                        <th style="color: red;text-align:center">Places réservés</th>
+                                        <th style="color: red;text-align:center">Max voyageurs</th>
                                         <th style="color: red;text-align:center">Date voyage</th>
                                         <th style="color: red;text-align:center">Prix</th>   
                                         <th style="color: red;text-align:center"></th>
@@ -44,6 +45,7 @@
                                         </td>
                                         <td style="text-align:center">{{ $voyage->reservations->transports->name}}</td>
                                         <td style="text-align:center">{{ $voyage->reservations->trajet}}</td>
+                                        <td style="text-align:center">{{ $voyage->nbr_personnes}}</td>
                                         <td style="text-align:center">{{ $voyage->reservations->nbr_place_disponible}}</td>
                                         <td style="text-align:center">{{ \Carbon\Carbon::parse($voyage->reservations->date_voyage)->format('d/m/Y h:m')}}</td>
                                         <td style="text-align:center"> {{ $voyage->reservations->prix}}.00 dhs</td>  
