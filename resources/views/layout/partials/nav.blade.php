@@ -13,6 +13,25 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-bus-school"></i>
                                 </span>
+                                <span class="title">Utilisateurs</span>
+                                <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu"> 
+                                <li>
+                                    <a href="{{ url('/user/new') }}">Nouveau</a>
+                                </li> 
+                                <li>
+                                    <a href="{{ url('/users') }}">Liste</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-bus-school"></i>
+                                </span>
                                 <span class="title">Voyages</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>

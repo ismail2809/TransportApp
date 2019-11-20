@@ -35,3 +35,8 @@ Route::get('/profile', 'ProfileController@index');
 Route::get('/profile/{id}/edit', 'ProfileController@edit'); 
 Route::put('/profile/{id}', 'ProfileController@update'); 
 
+//user
+Route::get('/user/new', 'UserController@form_create'); 
+Route::get('/users', 'UserController@index'); 
+Route::post('/user', 'UserController@create'); 
+
