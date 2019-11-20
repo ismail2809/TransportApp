@@ -26,6 +26,7 @@ Route::get('/reservation/new', 'ReservationController@create');
 Route::post('/reservation', 'ReservationController@store')->name('reservation');
 Route::get('/reservation/détail/{id}', 'VoyageController@show');
 Route::get('/reservation/listes', 'ReservationController@listes'); 
+Route::get('/reservation/historiques', 'ReservationController@historiquesReservation'); 
 Route::get('/voyages', 'VoyageController@index')->name('voyages');
 Route::post('/voyage', 'VoyageController@store')->name('voyage');
 Route::get('/voyage/listes', 'VoyageController@listes'); 

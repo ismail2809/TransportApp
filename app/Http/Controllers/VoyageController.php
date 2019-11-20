@@ -33,7 +33,7 @@ class VoyageController extends Controller
      public function show($id){
 
         $reservation = Reservation::find($id);
-        $this->authorize('view',$reservation);
+        //$this->authorize('view',$reservation);
         $voyages = Voyage::where('reservation_id',$id)->sum('nbr_personnes');
         $place_reste = ($reservation->nbr_place_disponible - $voyages);
         
