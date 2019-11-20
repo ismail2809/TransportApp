@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Reservation;
+use App\Transport;
+use App\Voyage;
+use App\User;
+use Auth;
+use Carbon\Carbon;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +30,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::all();
+        $reservations = Reservation::all();  
+        $transports = Transport::all();
+        $voyages = Voyage::all();
+        $date = Carbon::now()->month;
+        $reservations = Reservation::where('date_voyage','=',$date)->get();
+        //dd($reservations);
+
+        return view('dashboard',compact('users','reservations','transports','voyages'));
     }
 }

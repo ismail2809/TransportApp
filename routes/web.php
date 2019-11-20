@@ -21,6 +21,9 @@ Route::get('/1', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
 Route::get('/reservations', 'ReservationController@index')->name('reservations');
 Route::get('/reservation/new', 'ReservationController@create');
 Route::post('/reservation', 'ReservationController@store')->name('reservation');
@@ -39,4 +42,3 @@ Route::put('/profile/{id}', 'ProfileController@update');
 Route::get('/user/new', 'UserController@form_create'); 
 Route::get('/users', 'UserController@index'); 
 Route::post('/user', 'UserController@create'); 
-

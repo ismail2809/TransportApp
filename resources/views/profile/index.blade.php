@@ -13,7 +13,10 @@
         </div>
 
 <!-- Content Wrapper START -->
-                <div class="main-content">
+            <div class="card">
+                    <div class="card-header border bottom">                                                    
+                         <h3 class="text-center"><i class="mdi mdi-account font-size-25"></i>Profile</h3>
+                    </div> 
                     <div class="container-fluid">
                         <div class="card">
                             <div class="card-body">
