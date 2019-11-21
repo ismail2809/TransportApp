@@ -64,4 +64,10 @@ class ReservationController extends Controller
         $r =  Reservation::where('id', $id)->update(['nbr_place_reste' => ( $nbr_place_disponible - 1) ]);
         dd($r);
     }
+
+    public function historiquesReservation()
+    {
+        $reservations = Reservation::where('user_id',Auth::user()->id)->with('users','transports')->get();
+        return view('reservation.historiques',compact('reservations'));
+    }
 }
