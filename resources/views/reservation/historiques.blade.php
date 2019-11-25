@@ -15,7 +15,7 @@
         <div class="card">
             <div class="card-body m-v-40">
                 <div class="row">
-                    <div class="col-sm-10 offset-sm-1">
+                    <div class="col-sm-12">
                         <div class="row">
                             <div class="col-sm-2">
                                 <h5><b>Historiques </b></h5>
@@ -31,7 +31,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-10">
                                 <div class="table-overflow">
                                     <table id="dt-opt" class="table table-hover table-xl">
                                         <thead>

@@ -30,14 +30,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $reservations = Reservation::all();  
-        $transports = Transport::all();
-        $voyages = Voyage::all();
-        $date = Carbon::now()->month;
-        $reservations = Reservation::where('date_voyage','=',$date)->get();
-        //dd($reservations);
-
-        return view('dashboard',compact('users','reservations','transports','voyages'));
+        $users = User::count();
+        $reservations = Reservation::count();  
+        $reservation_prix = Reservation::sum('prix');  
+        $transports = Transport::count();
+        $voyages = Voyage::count();  
+        $all_reservations = Voyage::with('users','reservations')->get();
+        
+        return view('dashboard',compact('users','reservations','transports','voyages','reservation_prix','all_reservations'));
     }
 }
